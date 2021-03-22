@@ -27,6 +27,84 @@ Arabic Ps4 Games By Imadesigns
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	
+<!-- Star rating -->
+// select the svg element
+$svg: "";
+// select the path
+$path: "";
+// for each radio
+@for $i from 1 through 5 {
+  // for each valid star
+  @for $x from 1 through $i {
+    // add checked input to selectors
+    $svg: $svg + "#star-#{$i}:checked ~ ";
+    $path: $path + "#star-#{$i}:checked ~ ";
+    // add svg or path element sib to selectors
+    // scope = section label svg [path]
+    $svg: $svg + "section [for='star-#{$x}'] svg";
+    $path: $path + "section [for='star-#{$x}'] svg path";
+    // if not the last, we add a comma
+    @if $x != $i {
+      $svg: $svg + ", ";
+      $path: $path + ", ";
+    }
+  }
+  // if not the last, we add the comma
+  @if $i != 5 {
+    $svg: $svg + ", ";
+    $path: $path + ", ";
+  }
+}
+
+// style the active svg
+#{$svg} {
+  transform: scale(1);
+}
+// style the active path
+#{$path} {
+  fill: #FFBB00;
+  stroke: darken(#FFBB00, 10%);
+}  
+
+section {
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+label {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+    stroke: #CCC;
+    transform: scale(0.8);
+    transition: transform 200ms ease-in-out;
+    path {
+      transition: fill 200ms ease-in-out,
+        stroke 100ms ease-in-out;
+    }
+  }
+}
+
+label[for="star-null"] {
+  display: block;
+  margin: 0 auto;
+  color: #999;
+}
+<!-- Star rating -->
+
+
+
+
 
 																						<!-- Loading -->
 																						<style>
@@ -710,6 +788,12 @@ Arabic Ps4 Games By Imadesigns
 					<details><summary class="showmoredetails">+ Click here +<br>+ اضغط هنا  +</summary>
 					<img src="https://thealternativeafterstory.files.wordpress.com/2020/12/tenor-1.gif?w=382" alt="NBA 2K21" style="width:230px;height:150px;">
 					<br>
+					
+					<!-- Star rating -->
+					<input type="radio" name="stars" id="star-null" /><input type="radio" name="stars" id="star-1" /><input type="radio" name="stars" id="star-2" /><input type="radio" name="stars" id="star-3" /><input type="radio" name="stars" id="star-4" checked /><input type="radio" name="stars" id="star-5" /><section><label for="star-1"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-2"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-3"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-4"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-5"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-null">
+					Clear
+					</label></section>
+					<!-- Star rating -->
 					
 					<br>
 					RELEASE:
