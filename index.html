@@ -29,82 +29,6 @@ Arabic Ps4 Games By Imadesigns
     <![endif]-->
 	
 	
-<!-- Star rating 
-<style>
-// select the svg element
-$svg: "";
-// select the path
-$path: "";
-// for each radio
-@for $i from 1 through 5 {
-  // for each valid star
-  @for $x from 1 through $i {
-    // add checked input to selectors
-    $svg: $svg + "#star-#{$i}:checked ~ ";
-    $path: $path + "#star-#{$i}:checked ~ ";
-    // add svg or path element sib to selectors
-    // scope = section label svg [path]
-    $svg: $svg + "section [for='star-#{$x}'] svg";
-    $path: $path + "section [for='star-#{$x}'] svg path";
-    // if not the last, we add a comma
-    @if $x != $i {
-      $svg: $svg + ", ";
-      $path: $path + ", ";
-    }
-  }
-  // if not the last, we add the comma
-  @if $i != 5 {
-    $svg: $svg + ", ";
-    $path: $path + ", ";
-  }
-}
-
-// style the active svg
-#{$svg} {
-  transform: scale(1);
-}
-// style the active path
-#{$path} {
-  fill: #FFBB00;
-  stroke: darken(#FFBB00, 10%);
-}  
-
-section {
-  width: 300px;
-  text-align: center;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-label {
-  display: inline-block;
-  width: 20px;
-  text-align: center;
-  cursor: pointer;
-  svg {
-    width: 100%;
-    height: auto;
-    fill: white;
-    stroke: #CCC;
-    transform: scale(0.8);
-    transition: transform 200ms ease-in-out;
-    path {
-      transition: fill 200ms ease-in-out,
-        stroke 100ms ease-in-out;
-    }
-  }
-}
-
-label[for="star-null"] {
-  display: block;
-  margin: 0 auto;
-  color: #999;
-}
-</style>
- Star rating -->
-
-
 
 
 
@@ -345,24 +269,6 @@ label[for="star-null"] {
 <!-- welcome javascript -->
 <script src="welcome.js"></script>
 <!-- welcome javascript -->
-
-
-
-
-					<!-- Star rating 
-					<input type="radio" name="stars" id="star-null" /><input type="radio" name="stars" id="star-1" /><input type="radio" name="stars" id="star-2" /><input type="radio" name="stars" id="star-3" /><input type="radio" name="stars" id="star-4" checked /><input type="radio" name="stars" id="star-5" /><section><label for="star-1"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-2"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-3"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-4"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-5"><svg width="255" height="240" viewBox="0 0 51 48"><path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/></svg></label><label for="star-null">
-					Clear
-					</label></section>
-					 Star rating -->
-
-
-
-
-
-
-
-
-																						
 
 
 
@@ -810,7 +716,294 @@ label[for="star-null"] {
 					<!-- announcement message blink flashing --> CUSA14936 – EUR:</u>
 					<br>
 					
+<!-- Star rating -->	
+<style>
+.rating {
+  text-align: center;
+  margin-top: 120px;
+  position: relative;
+  width: 50%;
+  float: left;
+}
 
+.hidden {
+  opacity: 0;
+}
+
+.star {
+  display: inline-block;
+  margin: 5px;
+  font-size: 30px;
+  color: whitesmoke;
+  position: relative;
+
+  
+  &.animate {
+     -webkit-animation: stretch-bounce .5s ease-in-out;
+  }
+  
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.full {
+  &:before {
+    font-family: fontAwesome;
+    display: inline-block;
+    content: "\f005";
+    position: relative;
+    float: right;
+    z-index: 2;
+  }
+}
+
+.half {
+  &:before {
+     font-family: fontAwesome;
+     content: "\f089";
+     position: absolute;
+     float: left;
+    z-index: 3;
+  }
+}
+
+.star-colour {
+  color: #ffd700;
+}
+
+
+  
+@-webkit-keyframes stretch-bounce {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+.selected {
+  &:before {
+    font-family: fontAwesome;
+    display: inline-block;
+    content: "\f005";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  &.pulse {
+    &:before {
+      -webkit-transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  &.is-animated {
+    &:before {
+       transition: 1s ease-out;
+    }
+  }
+}
+
+.score {
+  font-family: arial;
+  font-size: 20px;
+  color: green;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.score-rating {
+  vertical-align: sup;
+  top: -5px;
+  position: relative;
+  font-size: 150%;
+}
+
+.total {
+  vertical-align: sub;
+  top: 0px;
+  position: relative;
+  font-size: 100%;
+}
+
+.average {
+  font-family: arial;
+  font-size: 20px;
+  color: indianred;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  
+  .score-average {
+    padding-top: 30px;
+  }
+}
+</style>
+<script>
+var starClicked = false;
+
+$(function() {
+
+  $('.star').click(function() {
+
+    $(this).children('.selected').addClass('is-animated');
+    $(this).children('.selected').addClass('pulse');
+
+    var target = this;
+
+    setTimeout(function() {
+      $(target).children('.selected').removeClass('is-animated');
+      $(target).children('.selected').removeClass('pulse');
+    }, 1000);
+
+    starClicked = true;
+  })
+
+  $('.half').click(function() {
+    if (starClicked == true) {
+      setHalfStarState(this)
+    }
+    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
+
+    $(this).closest('.rating').data('vote', $(this).data('value'));
+    calculateAverage()
+    console.log(parseInt($(this).data('value')));
+
+  })
+
+  $('.full').click(function() {
+    if (starClicked == true) {
+      setFullStarState(this)
+    }
+    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
+
+    $(this).find('js-average').text(parseInt($(this).data('value')));
+
+    $(this).closest('.rating').data('vote', $(this).data('value'));
+    calculateAverage()
+
+    console.log(parseInt($(this).data('value')));
+  })
+
+  $('.half').hover(function() {
+    if (starClicked == false) {
+      setHalfStarState(this)
+    }
+
+  })
+
+  $('.full').hover(function() {
+    if (starClicked == false) {
+      setFullStarState(this)
+    }
+  })
+
+})
+
+function updateStarState(target) {
+  $(target).parent().prevAll().addClass('animate');
+  $(target).parent().prevAll().children().addClass('star-colour');
+
+  $(target).parent().nextAll().removeClass('animate');
+  $(target).parent().nextAll().children().removeClass('star-colour');
+}
+
+function setHalfStarState(target) {
+  $(target).addClass('star-colour');
+  $(target).siblings('.full').removeClass('star-colour');
+  updateStarState(target)
+}
+
+function setFullStarState(target) {
+  $(target).addClass('star-colour');
+  $(target).parent().addClass('animate');
+  $(target).siblings('.half').addClass('star-colour');
+
+  updateStarState(target)
+}
+
+function calculateAverage() {
+  var average = 0
+
+  $('.rating').each(function() {
+    average += $(this).data('vote')
+  })
+
+  $('.js-average').text((average/ $('.rating').length).toFixed(1))
+}
+</script>
+  <div class="star">
+
+    <span class="full" data-value="1"></span>
+    <span class="half" data-value="0.5"></span>
+    <span class="selected"></span>
+
+  </div>
+
+  <div class="star">
+
+    <span class="full" data-value="2"></span>
+    <span class="half" data-value="1.5"></span>
+    <span class="selected"></span>
+
+  </div>
+
+  <div class="star">
+
+    <span class="full" data-value="3"></span>
+    <span class="half" data-value="2.5"></span>
+    <span class="selected"></span>
+
+  </div>
+
+  <div class="star">
+
+    <span class="full" data-value="4"></span>
+    <span class="half" data-value="3.5"></span>
+    <span class="selected"></span>
+
+  </div>
+
+  <div class="star">
+
+    <span class="full" data-value="5"></span>
+    <span class="half" data-value="4.5"></span>
+    <span class="selected"></span>
+
+  </div>
+
+  <div class="score">
+    <span class="score-rating js-score">0</span>
+    <span>/</span>
+    <span class="total">5</span>
+  </div>
+</div>
+    
+  <div class="rating" data-vote="0">
+
+  <div class="star hidden">
+    <span class="full"data-value="0"></span>
+    <span class="half"data-value="0"></span>
+  </div>
+<!--  Star rating -->					
+					<br>
 					
 					<details><summary class="showmoredetails">+ Click here +<br>+ اضغط هنا  +</summary>
 					<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/30616289/3008c63b1752fe921e8c6bca3c1c11bd468c01f6.gif" alt="Feudal Alloy Arabic" style="width:230px;height:150px;">
@@ -6520,11 +6713,11 @@ label[for="star-null"] {
 
 					</h5></a></details>
 			</article></li>
-			<!-- Game 65 -->
+			<!-- Game 65 
 					<li class="animals">
             <article class="col-md-4 article-intro">
 					<img src="link" alt="Sp1der Man Arabic" style="width:178px;height:230px;">
-					<h5><u>Sp1der Man  <!-- announcement message blink flashing -->
+					<h5><u>Sp1der Man  <!-- announcement message blink flashing 
 					<center><b><font size="3" color="red"><span class="blinking"> Arabic, العربية </span></font></center><style>
 					.blinking{
 						animation:blinkingText 1.2s infinite;
@@ -6537,7 +6730,7 @@ label[for="star-null"] {
 						100%{   color: orange;    }
 					}
 					</style>
-					<!-- announcement message blink flashing --> CUSA--14876 – EUR:</u>
+					<!-- announcement message blink flashing  CUSA--14876 – EUR:</u>
 					<br>
 					<details><summary class="showmoredetails">+ Click here +<br>+ اضغط هنا  +</summary>
 					<img src="link" alt="Sp1der Man Arabic" style="width:230px;height:150px;">
@@ -6604,7 +6797,9 @@ label[for="star-null"] {
 
 
 					</h5></a></details>
-			</article></li>
+			</article></li> -->
+			
+			
 					<!-- Game 66 -->
 					<li class="animals">
             <article class="col-md-4 article-intro">
