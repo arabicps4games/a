@@ -14,21 +14,6 @@ Arabic Ps4 Games By Imadesigns
 
 
 </title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="custom.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
-	
 	
 <!-- Star rating -->	
 <style>
@@ -170,7 +155,118 @@ Arabic Ps4 Games By Imadesigns
   }
 }
 </style>
+<script>
+var starClicked = false;
+
+$(function() {
+
+  $('.star').click(function() {
+
+    $(this).children('.selected').addClass('is-animated');
+    $(this).children('.selected').addClass('pulse');
+
+    var target = this;
+
+    setTimeout(function() {
+      $(target).children('.selected').removeClass('is-animated');
+      $(target).children('.selected').removeClass('pulse');
+    }, 1000);
+
+    starClicked = true;
+  })
+
+  $('.half').click(function() {
+    if (starClicked == true) {
+      setHalfStarState(this)
+    }
+    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
+
+    $(this).closest('.rating').data('vote', $(this).data('value'));
+    calculateAverage()
+    console.log(parseInt($(this).data('value')));
+
+  })
+
+  $('.full').click(function() {
+    if (starClicked == true) {
+      setFullStarState(this)
+    }
+    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
+
+    $(this).find('js-average').text(parseInt($(this).data('value')));
+
+    $(this).closest('.rating').data('vote', $(this).data('value'));
+    calculateAverage()
+
+    console.log(parseInt($(this).data('value')));
+  })
+
+  $('.half').hover(function() {
+    if (starClicked == false) {
+      setHalfStarState(this)
+    }
+
+  })
+
+  $('.full').hover(function() {
+    if (starClicked == false) {
+      setFullStarState(this)
+    }
+  })
+
+})
+
+function updateStarState(target) {
+  $(target).parent().prevAll().addClass('animate');
+  $(target).parent().prevAll().children().addClass('star-colour');
+
+  $(target).parent().nextAll().removeClass('animate');
+  $(target).parent().nextAll().children().removeClass('star-colour');
+}
+
+function setHalfStarState(target) {
+  $(target).addClass('star-colour');
+  $(target).siblings('.full').removeClass('star-colour');
+  updateStarState(target)
+}
+
+function setFullStarState(target) {
+  $(target).addClass('star-colour');
+  $(target).parent().addClass('animate');
+  $(target).siblings('.half').addClass('star-colour');
+
+  updateStarState(target)
+}
+
+function calculateAverage() {
+  var average = 0
+
+  $('.rating').each(function() {
+    average += $(this).data('vote')
+  })
+
+  $('.js-average').text((average/ $('.rating').length).toFixed(1))
+}
+</script>
+ 
 <!-- Star rating -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	
+
 
 
 																						<!-- Loading -->
@@ -892,100 +988,7 @@ Arabic Ps4 Games By Imadesigns
 							
 							     
 <!-- Star rating -->
-<script>
-var starClicked = false;
 
-$(function() {
-
-  $('.star').click(function() {
-
-    $(this).children('.selected').addClass('is-animated');
-    $(this).children('.selected').addClass('pulse');
-
-    var target = this;
-
-    setTimeout(function() {
-      $(target).children('.selected').removeClass('is-animated');
-      $(target).children('.selected').removeClass('pulse');
-    }, 1000);
-
-    starClicked = true;
-  })
-
-  $('.half').click(function() {
-    if (starClicked == true) {
-      setHalfStarState(this)
-    }
-    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
-
-    $(this).closest('.rating').data('vote', $(this).data('value'));
-    calculateAverage()
-    console.log(parseInt($(this).data('value')));
-
-  })
-
-  $('.full').click(function() {
-    if (starClicked == true) {
-      setFullStarState(this)
-    }
-    $(this).closest('.rating').find('.js-score').text($(this).data('value'));
-
-    $(this).find('js-average').text(parseInt($(this).data('value')));
-
-    $(this).closest('.rating').data('vote', $(this).data('value'));
-    calculateAverage()
-
-    console.log(parseInt($(this).data('value')));
-  })
-
-  $('.half').hover(function() {
-    if (starClicked == false) {
-      setHalfStarState(this)
-    }
-
-  })
-
-  $('.full').hover(function() {
-    if (starClicked == false) {
-      setFullStarState(this)
-    }
-  })
-
-})
-
-function updateStarState(target) {
-  $(target).parent().prevAll().addClass('animate');
-  $(target).parent().prevAll().children().addClass('star-colour');
-
-  $(target).parent().nextAll().removeClass('animate');
-  $(target).parent().nextAll().children().removeClass('star-colour');
-}
-
-function setHalfStarState(target) {
-  $(target).addClass('star-colour');
-  $(target).siblings('.full').removeClass('star-colour');
-  updateStarState(target)
-}
-
-function setFullStarState(target) {
-  $(target).addClass('star-colour');
-  $(target).parent().addClass('animate');
-  $(target).siblings('.half').addClass('star-colour');
-
-  updateStarState(target)
-}
-
-function calculateAverage() {
-  var average = 0
-
-  $('.rating').each(function() {
-    average += $(this).data('vote')
-  })
-
-  $('.js-average').text((average/ $('.rating').length).toFixed(1))
-}
-</script>
- 
 
   <div class="star">
 
