@@ -288,7 +288,99 @@ width: 200px;
 
 
 </style>		
-<!-- logo image css -->						
+<!-- logo image css -->		
+	
+<style>
+*/
+stories
+*/
+*{box-sizing:border-box; transition: all ease-in-out .6s}
+
+*/body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color:#fff;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}*/
+
+ul {
+  list-style:none;
+}
+
+img {
+  max-width:100%;
+  display: block;
+  object-fit:cover;
+}
+
+.story-container {
+  width:  300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.story-container .wrapper {
+  display: flex;
+}
+
+/* .story-container .wrapper img {
+   width: 160px !important;
+} */
+.tips-container {
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  align-items:center;
+  justify-content:center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 10px auto;
+  height: 5px;
+  padding: 0;
+}
+
+.tips-container li {
+  width: 80%;
+  margin: 0 auto;
+  border-radius:2px;
+  background:#ffffff75;
+  height: 4px;
+  transition: all ease .2s;
+}
+
+.tips-container li.active {
+ background:hsl(264, 100%, 50%); 
+}
+
+
+.slide-prev,
+.slide-next {
+    display: block;
+    width: 30px;
+    height:30px;
+    opacity: .8;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==') no-repeat;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 999;
+}
+
+.slide-prev {
+    left: 5px;
+    transform: rotate(180deg)
+}
+*/
+stories
+*/
+</style>
 
 </head>
 
@@ -644,11 +736,131 @@ window.open(locs[i])}
 												<br><br><br>طريقة التحميل من موقعنا:<br>
 												<iframe width="160" height="280" src="https://www.youtube.com/embed/dGzOQNmRIro" title="طريقة التحميل من موقعنا arabicps4games" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 												<!-- buttons category -->
-
+												<!-- stories body -->
+												<br>
+												<div class="story-container">
+													<br><center>Latest Games</center>
+												  <div class="wrapper">
+												  <img src="story1.jpeg?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+												  <img src="story2.jpeg?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+												  <img src="story3.jpeg?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+												  <img src="story4.jpeg?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+												    
+												  </div>
+												  <ul class="tips-container"></ul>
+												  <div class="slide-prev"></div>
+												  <div class="slide-next"></div>
+												</div>
+												<!-- stories body -->
 												</div>
 									</div>	
 									<!-- sidemenuinside -->
 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+<!-- stories script -->
+<script>
+const tipsContainer = document.querySelector('.tips-container')
+const storyContainer = document.querySelector('.story-container')
+const storyWrapper = document.querySelector('.wrapper')
+const imgsNodeList = document.querySelectorAll('.wrapper img')
+const slideNext = document.querySelector('.slide-next')
+const slidePrev = document.querySelector('.slide-prev')
+const imgsArray = Array.from(imgsNodeList)
+
+const imgsInfo = {
+  count: 0,
+  images: imgsArray,
+  itemAtual: 0
+}
+
+
+
+const createStoryTip = () => {
+  
+  let storyTip = document.createElement('li')
+  storyTip.classList.add('story-tip')
+  tipsContainer.childElementCount == 0 && storyTip.classList.add('active')
+  tipsContainer.appendChild(storyTip)
+  tipsContainer.style.gridTemplateColumns = `repeat(${imgsArray.length}, 1fr)`
+  
+}
+
+const activeStoryTip = (st) => {
+  tipsContainer.querySelectorAll('li').forEach(i=>i.classList.remove('active'))
+  st.classList.add('active')
+}
+
+imgsArray.map( (i, index) => {
+
+  imgsInfo.count++
+  createStoryTip()
+  
+})
+
+const interval = setInterval(()=>{
+  slideRight(imgsInfo.itemAtual++)
+}, 1500)
+
+const slideRight = (itemAtual) => {
+    
+    if (itemAtual < 0) { imgsInfo.itemAtual = imgsArray.length - 1;itemAtual = imgsArray.length - 1 }
+    // imgsInfo.itemAtual = itemAtual
+    console.log(itemAtual)
+    
+    if (itemAtual >= imgsArray.length) {
+        storyWrapper.style.transform = `translate3d(0, 0, 0)`
+        imgsInfo.itemAtual = 0
+        itemAtual = 0
+  }
+    activeStoryTip(tipsContainer.querySelectorAll('li')[itemAtual])
+    storyWrapper.style.transform = `translate3d(-${storyContainer.offsetWidth * itemAtual}px, 0, 0)`
+  
+}
+
+slidePrev.addEventListener('click', () => {
+   slideRight(--imgsInfo.itemAtual)
+})
+
+slideNext.addEventListener('click', () => {
+   slideRight(++imgsInfo.itemAtual)
+})
+</script>
+<!-- stories script -->
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
 	
 	
 
