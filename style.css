@@ -590,10 +590,10 @@ social button
   background: #55acee;
 }
 .social-button--instagram {
-  color: #e4405f;
+  color: brown;
 }
 .social-button--instagram::after {
-  background: #e4405f;
+  background: brown;
 }
 .social-button--whatsapp {
   color: green;
