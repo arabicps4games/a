@@ -598,8 +598,16 @@ social button
 .social-button--whatsapp {
   color: green;
 }
+
 .social-button--whatsapp::after {
   background: green;
+}
+.social-button--tiktok {
+  color: black;
+}
+
+.social-button--tiktok::after {
+  background: black;
 }
 .social-button--npmjs {
   color: #c12127;
