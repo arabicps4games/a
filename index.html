@@ -159,11 +159,12 @@
 }
 
 .menu.active {
-	height: 90vh;
+	height: 127vh;
 	color: white;
 }
 
 .btn-menu {
+	margin-bottom: 17px;
 	color: white;
 	height: 2.5rem;
 	width: 4rem;
@@ -201,28 +202,129 @@ nav {
 	}
 }
 </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+<style>
+}
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 2px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+/* 12 */
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+</style>
+
+
 </head>
 
 <div class="menu" id="menu">
 	<a href="#" class="btn-menu" id="btn-menu"></a>
 	<nav>
 		<ul>
-			<li><a href="#"><font color="white">&nbsp;-&nbsp; Home</font></a></li>
-			<li><a href="https://toparabicmovies.blogspot.com"><font color="white">&nbsp;-&nbsp; Arabicmovies</font></a></li>
-			<li><a href="https://arabicpcgames.github.io"><font color="white">&nbsp;-&nbsp; Arabicpcgames</font></a></li>
-			<li><a href="https://www.paypal.com/paypalme/ImadAaliye"><font color="white">&nbsp;-&nbsp; Support US</font></a></li>
-			<li><a href="https://ckk.ai/Ps4Jailbreakps4"><font color="white">&nbsp;-&nbsp; Ps4 Jailbreak Hosts</font></a></li>
-			<li><a href="https://ckk.ai/Tutorialsps4ps4"><font color="white">&nbsp;-&nbsp; Tutorials</font></a></li>
-			<li><a href="https://ckk.ai/Ps4Appsps4"><font color="white">&nbsp;-&nbsp; Ps4 Apps</font></a></li>
-			<li><a href="https://ckk.ai/Ps4Themesps4"><font color="white">&nbsp;-&nbsp; Ps4 Themes</font></a></li>
-			<li><a href="https://ckk.ai/Downloadingps4"><font color="white">&nbsp;-&nbsp; Downloading Methods</font></a></li>
-			<li><a href="https://ckk.ai/PS4Updates"><font color="white">&nbsp;-&nbsp; PS4 System Softeware Updates</font></a></li>
-			<li><a href="https://ckk.ai/PS4Gamesps4"><font color="white">&nbsp;-&nbsp; PS4 Games List</font></a></li>
-			<!-- number of views --><div class="downvideo"><font color="white"><b><strong>&nbsp;-&nbsp; عدد الزوار</strong></b></font><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/746254/t/0"></script><br></div><!-- number of views -->
-			<!-- quran --><div class="quranmp3">&nbsp;-&nbsp; Quran - القرآن<br><audio controls autoplay loop preload="auto"><source src="https://server14.mp3quran.net/islam/Rewayat-Hafs-A-n-Assem/067.mp3" /></audio><!-- quran -->
+			<li><a href="#"><font color="white"><button class="custom-btn btn-12"><span>Home</span><span>Home</span></button></font></a></li>
+			<li><a href="https://toparabicmovies.blogspot.com"><font color="white"><button class="custom-btn btn-12"><span>Arabicmovies</span><span>Watch Movies</span></button></font></a></li>
+			<li><a href="https://arabicpcgames.github.io"><font color="white"><button class="custom-btn btn-12"><span>Arabicpcgames</span><span>Play Pc Games</span></button></font></a></li>
+			<li><a href="https://ckk.ai/Ps4Jailbreakps4"><font color="white"><button class="custom-btn btn-12"><span>Ps4 Jailbreak Hosts</span><span>Check Ps4 Hosts</span></button></font></a></li>
+			<li><a href="https://ckk.ai/Tutorialsps4ps4"><font color="white"><button class="custom-btn btn-12"><span>Tutorials</span><span>Check Tutos</span></button></font></a></li>
+			<li><a href="https://ckk.ai/Ps4Appsps4"><font color="white"><button class="custom-btn btn-12"><span>Ps4 Apps</span><span>Check Ps4 Apps</span></button></font></a></li>
+			<li><a href="https://ckk.ai/Ps4Themesps4"><font color="white"><button class="custom-btn btn-12"><span>Ps4 Themes</span><span>Check Ps4 Themes</span></button></font></a></li>
+			<li><a href="https://ckk.ai/Downloadingps4"><font color="white"><button class="custom-btn btn-12"><span>Downloading Methods</span><span>How To Download</span></button></font></a></li>
+			<li><a href="https://ckk.ai/PS4Updates"><font color="white"><button class="custom-btn btn-12"><span>PS4 System Softeware Updates</span><span>Download Firmeware</span></button></font></a></li>
+			<li><a href="https://ckk.ai/PS4Gamesps4"><font color="white"><button class="custom-btn btn-12"><span>PS4 Games List</span><span>Check Ps4 List Games</span></button></font></a></li>
+			<li><a href="https://www.paypal.com/paypalme/ImadAaliye"><font color="white"><button class="custom-btn btn-12"><span>Support US</span><span>Help Community</span></button></font></a></li>
+			<!-- number of views --><div class="downvideo"><font color="white"><b><strong><button class="custom-btn btn-12"><span>عدد الزوار</span><span>Check Visitors</span></button></strong></b></font>&nbsp;<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/746254/t/0"></script><br></div><!-- number of views -->
+			<!-- quran --><div class="quranmp3"><button class="custom-btn btn-12"><span>Quran - القرآن</span><span>Play Quran</span></button><br><audio controls autoplay loop preload="auto"><source src="https://server14.mp3quran.net/islam/Rewayat-Hafs-A-n-Assem/067.mp3" /></audio><!-- quran -->
 		</ul>
 	</nav>
-	<p>&nbsp;-&nbsp; Welcome</p>
+	<p>Welcome</span><span></span></button></p>
 	
 </div>
 <script>
