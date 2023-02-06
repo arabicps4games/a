@@ -605,9 +605,14 @@ social button
 .social-button--tiktok {
   color: black;
 }
-
 .social-button--tiktok::after {
   background: black;
+}
+.social-button--telegram {
+  color: #229ED9;
+}
+.social-button--telegram::after {
+  background: #229ED9;
 }
 .social-button--npmjs {
   color: #c12127;
