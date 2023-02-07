@@ -174,7 +174,7 @@ zoom: 100%;
 
   justify-content: center;
   height: 100vh;
-  width: 100%;
+  width: 110%;
 }
 
 /* Container to hold all cards in one place */
@@ -195,16 +195,23 @@ zoom: 100%;
   display: table-cell;
   height: 100%;
   justify-content: center;
-  width: 100%;
+  width: 98%;
   margin: 2px;
-  padding: 2px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-section {
+  padding-right: 40px;
+  }
 }
 
 /* A container to hold the flip card and the inside page */
 .card {
   background-color: rgba(0,0,0, .05);
   box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-  height: 15rem;
+  height: 16rem;
   position: relative;
   transition: all 1s ease;
   width: 15rem;
@@ -214,7 +221,7 @@ zoom: 100%;
 
 /* An outer container to hold the flip card. This excludes the inside page */
 .flip-card {
-  height: 15rem;
+  height: 16rem;
   perspective: 100rem;
   position: absolute;
   right: 0;
@@ -260,7 +267,7 @@ zoom: 100%;
 }
 
 .card-front {
-  height: 15rem;
+  height: 16rem;
   width: 15rem;
 }
 
