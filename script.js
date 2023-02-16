@@ -1,3 +1,14 @@
+// loading
+$(document).ready(function() {
+ 
+  // Fakes the loading setting a timeout
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 3500);
+ 
+});
+// loading
+
 $(document).ready(function(){
 $("body").trigger("click");
   $("a.link").hover(
