@@ -170,7 +170,9 @@ zoom: 125%;
   color: orange;
 }
 
-
+.inside-page__btn:hover::before { 
+  transform: scaleY(1);
+}
 
 /* Layout Structure=========================================*/
 
@@ -213,7 +215,7 @@ zoom: 125%;
   justify-content: center;
   width: 98%;
   margin: 2px;
-  padding-right: 0px;
+  padding-right: 30px;
   padding-bottom: 20px;
 }
 
@@ -227,7 +229,7 @@ zoom: 125%;
 .card {
   background-color: rgba(0,0,0, .05);
   box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-  height: 20rem;
+  height: 16rem;
   position: relative;
   transition: all 1s ease;
   width: 15rem;
@@ -240,18 +242,38 @@ zoom: 125%;
 
 /* Flip card - covering both the front and inside front page */
 
-
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+  height: 16rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
 
 /* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
 /* This is done so content in the inside page can be selected */
 .flip-card > * {
-  visibility: hidden;
+  visibility: visible;
 }
 
-
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
 
 .card-front,
 .card-back {
+  backface-visibility: hidden;
   height: 100%;
   left: 0;
   position: absolute;
@@ -365,7 +387,12 @@ zoom: 125%;
 
 /* Functionality ====================================*/
 
-
+/* This is to keep the card centered (within its container) when opened */
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
 
 /* When the card is hovered, the flip card container will rotate */
 .card:hover .flip-card__container {
