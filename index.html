@@ -24,13 +24,13 @@
 
 
 <style>
-body {
+/*body {
   background-image: url('https://i.makeagif.com/media/3-15-2014/pS6luP.gif');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;10%;
   background-opacity: 
-}
+}*/
 </style>
 <style>
 
@@ -103,6 +103,68 @@ width: 90%;
 
 </head>
 <body onselect="false">
+
+
+<!-- ps4 background wave -->
+<div class="wave">
+  <div class="wave--one"></div>
+  <div class="wave--two"></div>
+  <div class="wave--three"></div>
+</div>
+<style>
+wave{
+  z-index: -999;
+}
+.wave{
+  z-index: -999;
+}
+#wave{
+  z-index: -999;
+}
+body {
+  background-color: #0e6cc4;
+}
+.wave {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+}
+.wave > div {
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  opacity: 0.4;
+  position: fixed;
+  top: 3%;
+  left: 10%;
+}
+.wave--one {
+  background: #0af;
+  animation: drift 7000ms infinite linear;
+}
+.wave--two {
+  animation: drift 3000ms infinite linear;
+  opacity: 0.1;
+  background: black;
+}
+.wave--three {
+  animation: drift 7500ms infinite linear;
+  background-color: #77daff;
+}
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+</style>
+<!-- ps4 background wave -->
 
 
 <!-- loading -->
