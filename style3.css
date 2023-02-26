@@ -26,13 +26,13 @@ body {
 }
 
 body{
-zoom: 125%;
+zoom: 150%;
 }
 
 
 @media only screen and (max-width: 600px) {
   body {
-  zoom: 125%;
+  zoom: 75%;
   }
 }
 
@@ -201,7 +201,7 @@ zoom: 125%;
   display: table-cell;
   height: 100%;
   justify-content: space-evenly;
-  padding-left: 40px;
+  padding-left: 30px;
   padding-right: 0px;
 }
 
