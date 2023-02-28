@@ -6,6 +6,12 @@ body{
 	overflow-y:hidden;
 }
 
+@media only screen and (max-width: 800px) {
+  body {
+  zoom: 35%;
+  }
+}
+
 header{
 	height: 3em;
 	position: fixed;
@@ -70,6 +76,14 @@ header div{
 	font-family: arial;
 	width: 25%;
 	float: left;
+	line-height: 3em;
+}
+
+ps4signin{
+	color: white;
+	font-family: arial;
+	width: 30%;
+	float: right;
 	line-height: 3em;
 }
 
@@ -176,18 +190,6 @@ header div{
 
 .CallofDutyModernWarfareRemastered{
 	background-image: url("https://i.postimg.cc/1txpLFQk/ezgif-4-08e5b5c7e8.jpg");
-}
-
-.RedDeadRedemption2{
-	background-image: url("https://i.postimg.cc/wMqT2F5J/ezgif-4-2f1812e3de.jpg");
-}
-
-.CallofDutyModernWarfare2{
-	background-image: url("https://i.postimg.cc/XY7H1VNL/ezgif-4-02509bb68d.jpg");
-}
-
-.EldenRing{
-	background-image: url("https://i.postimg.cc/HL8f3p3K/ezgif-4-003331119a.jpg");
 }
 
 .library{
