@@ -227,7 +227,7 @@ zoom: 125%;
 .card {
   background-color: rgba(0,0,0, .05);
   box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-  height: 22rem;
+  height: 25rem;
   position: relative;
   transition: all 1s ease;
   width: 15rem;

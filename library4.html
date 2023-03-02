@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <title>ArabicPs4Games</title>
+  <link rel="stylesheet" href="./style4.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+<meta charset="UTF-8">
+	<title>PS4</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+header{
+	height: 3em;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+header div{
+	height: 100%;
+	display: inline-block;
+}
+
+#plus{
+	width: 3em;
+	background-image: url("https://s20.postimg.org/9jdjr9lml/plus.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#info{
+	width: 3em;
+	background-image: url("https://i.postimg.cc/m2x13xDd/info.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#textInfo{
+	color: white;
+	font-family: arial;
+	width: 25%;
+	float: left;
+	line-height: 3em;
+}
+
+#friends{
+	width: 3em;
+	background-image: url("https://i.postimg.cc/vHwbv8v1/friends.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#user{
+	margin-left: 1em;
+	width: 3em;
+	background-image: url("https://s20.postimg.org/yvwsexlfh/user.png");
+	background-size: 140%;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#userName{
+	color: white;
+	font-family: arial;
+	width: 25%;
+	float: left;
+	line-height: 3em;
+}
+
+#trophies{
+	margin-left: 1em;
+	width: 3em;
+	background-image: url("https://i.postimg.cc/wTKmp1Cx/trophy.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#clock{
+	font-family: arial;
+	line-height: 3em;
+	float: right;
+	margin-right: 1em;
+	color: white;;
+}
+
+/*ENF OF HEADER********************************/
+
+#games{
+
+
+	top: .5em;
+	left: 0;
+	padding: 5em;
+	z-index: 999999999999999999;
+	
+}
+
+.squareGame{
+	height: 11em;
+	width: 11em;
+	vertical-align: top;
+	display: inline-block;
+	transition: 0.3s ease;
+	z-index: 999999999999999999;
+}
+
+.squareGame:hover{
+	height: 16.5em;
+	width: 15em;
+	border: 3px solid white;
+	cursor: pointer;
+        z-index: 999999999999999999;
+}
+
+.squareGame:hover .imgGame{
+	height: 85%;
+	z-index: 999999999999999999;
+}
+
+.imgGame{
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 999999999999999999;
+}
+
+.gameText{
+	color: white;
+	font-family: arial;
+	text-align: center;
+	line-height: 2.4em;
+	background-color: rgba(255,255,255,.2);
+        z-index: 999999999999999999;
+}
+
+.gameTitle{
+	position: absolute;
+	color: white;
+	font-size: 1.2em;
+	font-family: Arial;
+	transform: translate(13.2em,-1.5em);
+	z-index: 999999999999999999;
+}
+/*SQUARE IMAGE*****************************************/
+
+.ascii{
+	font-weight: bold;
+}
+
+.ps{
+	background-image: url("https://i.postimg.cc/c1pRT9TJ/ps.png");
+}
+
+.new{
+	background-image: url("previouspage.png");
+}
+
+.Candleman{
+	background-image: url("https://i.postimg.cc/dDcDKqcZ/ezgif-4-15aaaeb38c.jpg");
+}
+
+.GameName2{
+	background-image: url("https://GameName2image.jpg");
+}
+
+.GameName3{
+	background-image: url("https://GameName3image.jpg");
+}
+
+.GameName4{
+	background-image: url("https://GameName4image.jpg");
+}
+
+.GameName5{
+	background-image: url("https://GameName5image.jpg");
+}
+
+.library{
+	background-image: url("nextpage.png");
+}
+
+
+
+.storeGame{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#god{
+	background-image: url("https://i.postimg.cc/bY7QwSfF/god.png");
+}
+
+#raider{
+	background-image: url("https://i.postimg.cc/VLyY6nsT/tomb.png");
+}
+
+#codi{
+	background-image: url("https://i.postimg.cc/MKkq3q1Q/if.png");
+}
+
+#mafia{
+	background-image: url("https://i.postimg.cc/gk94xTPp/mafia.png");
+}
+
+#destiny{
+	background-image: url("https://i.postimg.cc/ncbwWCgJ/destiny.png");
+}
+
+#bt1{
+	background-image: url("https://i.postimg.cc/fT4GmHvD/b1.png");
+}
+
+#lg{
+	background-image: url("https://i.postimg.cc/sfkNC263/horizon.png");
+}
+
+#per{
+	background-image: url("https://i.postimg.cc/QxGz5trH/per.png");
+}
+
+/*store*/
+
+#store{
+	padding: 1em;
+	padding-top: 6em;
+	margin-top: -3em;
+	width: 60em;
+	height: 25em;
+	padding-left: 12em;
+}
+
+#store div{
+	float: left;
+	border: 3px solid rgba(245,245,245,1);
+	width: 12em;
+	height: 12em;
+	display: inline-block;
+}
+
+#store div:hover{
+	transform: scale(1.1, 1.1);
+	box-shadow: 0px 5px 10px 3px rgba(45,45,45,.7);
+	transition: 0.3s ease;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+	z-index: -1;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+  z-index: -1;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+	z-index: -1;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: #77daff;
+	position: fixed;
+	z-index: -1;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 999999999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+/*librarygames****************************/
+
+.librarygames{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#Candleman{
+	background-image: url("https://i.postimg.cc/dDcDKqcZ/ezgif-4-15aaaeb38c.jpg");
+}
+
+#GameName2{
+	background-image: url("https://GameName2image.jpg");
+}
+
+#GameName3{
+	background-image: url("https://GameName3image.jpg");
+}
+
+#GameName4{
+	background-image: url("https://GameName4image.jpg");
+}
+
+#GameName5{
+	background-image: url("https://GameName5image.jpg");
+}
+
+#library{
+	background-image: url("nextpage.png");
+}
+
+/*store*/
+
+#librarygames{
+	padding: 1em;
+	padding-top: 6em;
+	margin-top: -3em;
+	width: 60em;
+	height: 25em;
+	padding-left: 12em;
+}
+
+#librarygames div{
+	float: left;
+	border: 3px solid rgba(245,245,245,1);
+	width: 12em;
+	height: 12em;
+	display: inline-block;
+}
+
+#librarygames div:hover{
+	transform: scale(1.1, 1.1);
+	box-shadow: 0px 5px 10px 3px rgba(45,45,45,.7);
+	transition: 0.3s ease;
+}
+*/
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+	<audio loop autoplay >
+	<source src="ps4.mp3" type="audio/mp3">
+	</audio>
+
+
+  <header>
+		<div id="plus"></div>
+		<a href="info.jpg"><div id="info"></div></a>
+		<div id="textInfo">Game Updated</div>
+		<div id="friends"></div>
+		<div id="user"></div>
+		<div id="userName"><a href="https://arabicps4games.github.io/a" target="_blank"><font color="white"><i>ArabicPs4Games</i></font></a></div>
+		<div id="trophies"></div>
+		<div id="clock"><!-- 10:02 PM -->
+		<span id="datetime"></span>
+
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
+		</div>
+	</header>
+
+
+	<div id="games">
+		<div class="squareGame animated bounceInLeft">
+			<a href="library3.html">
+			<div class="imgGame new">
+			</div>
+			</a>
+			<div class="gameText ascii">▼</div>
+			<span class="gameTitle">Previous Page</span>
+		</div>
+		<div class="squareGame animated bounceInLeft">
+			<a href="https://ouo.io/imjnjz" target="_blank">
+			<div class="imgGame Candleman">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">Candleman</span>
+		</div>
+		<div class="squareGame animated bounceInLeft">
+			<a href="https://GameLink" target="_blank">
+			<div class="imgGame GameName2">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">GameName2</span>
+		</div>
+		<div class="squareGame animated bounceInLeft">
+			<a href="https://GameLink" target="_blank">
+			<div class="imgGame GameName3">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">GameName3</span>
+		</div>
+		<div class="squareGame animated bounceInLeft">
+			<a href="https://GameLink" target="_blank">
+			<div class="imgGame GameName4">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">GameName4</span>
+		</div>
+		<div class="squareGame animated bounceInLeft">
+			<a href="https://GameLink" target="_blank">
+			<div class="imgGame GameName5">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">GameName5</span>
+		</div>	
+		<div class="squareGame animated bounceInLeft">
+			<a href="library5.html">
+			<div class="imgGame library">
+			</div>
+			</a>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">Next Page</span>
+		</div>
+		<!-- edit this library to add games from list and edit also style of this
+		<div class="squareGame animated bounceInLeft">
+			<div class="imgGame library"></div>
+			<div class="gameText">Start</div>
+			<span class="gameTitle">Library</span>
+			<div id="librarygames">
+				<div id="god" class="storeGame"></div>
+				<div id="raider" class="storeGame"></div>
+				<div id="codi" class="storeGame"></div>
+				<div id="mafia" class="storeGame"></div>
+				<div id="destiny" class="storeGame"></div>
+				<div id="bt1" class="storeGame"></div>
+				<div id="lg" class="storeGame"></div>
+				<div id="per" class="storeGame"></div>
+		</div> -->
+	</div>
+
+	<div class='box'>
+	  <div class='wave -one'></div>
+	  <div class='wave -two'></div>
+	  <div class='wave -three'></div>
+	</div>
+
+		
+	
+
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+		$(".gameText").hide();
+		$('.gameTitle').hide();
+		$('#store').hide();
+		timeout();
+
+		// Variables for current position
+		var x, y;
+
+		function handleMouse(e) {
+		  // Verify that x and y already have some value
+		  if (x && y) {
+		    // Scroll window by difference between current and previous positions
+		    window.scrollBy(e.clientX - x, e.clientY - y);
+		  }
+
+		  // Store current position
+		  x = e.clientX;
+		  y = e.clientY;
+		}
+
+		// Assign handleMouse to mouse movement events
+		document.onmousemove = handleMouse;
+
+		 $(window).scroll(function(){
+	        if ($(this).scrollTop() > 10) {
+	            $('header').css("background-color","rgba(34,123,165,.8)");
+	        } else {
+	            $('header').css("background-color","rgba(255,255,255,0)");
+	        }
+	    });
+	});
+
+	
+	var time = 0;
+
+	function timeout() {
+	    setTimeout(function () {
+	    	if(time===0){
+				$("#textInfo").text("New content Installed!");
+				$("#textInfo").addClass("animated slideInDown");
+				time++;
+			}else
+				if(time===1){
+				$("#textInfo").text("Demo Downloaded");
+				$("#textInfo").addClass("animated slideInDown");
+				time++;
+			}else
+				if(time===2){
+				$("#textInfo").text("Trophy Earned!");
+				$("#textInfo").addClass("animated slideInDown");
+				time=0;
+			}
+			setTimeout(function () {
+				$("#textInfo").removeClass("animated slideInDown");
+	    	}, 1000);
+	        timeout();
+	    }, 4000);
+	}
+
+	$(".squareGame").hover(
+		function(){
+			$(this).find('.gameText').show();
+			$(this).find('.gameTitle').show();
+			$(this).find('#store').show();
+		},
+		function(){
+			$(this).find('.gameText').hide();
+			$(this).find('.gameTitle').hide();
+			$(this).find('#store').hide();
+		}
+	);
+
+function init() {
+	  'use strict'
+	  function select(a) {
+	    return document.querySelector(a);
+	  }
+	  var randomNum = Math.floor((Math.random() * 24) + 1),
+	      triangle = select('.triangle img'),
+	      circle = select('.circle img'),
+	      cross = select('.cross img'),
+	      box = select('.boxi img'),
+	      link = 'http://kapilnemo.free.fr/codepen/playstation-loading/',
+	      order = [
+	        [1,2,3,4],
+	        [1,2,4,3],
+	        [1,3,2,4],
+	        [1,3,4,2],
+	        [1,4,2,3],
+	        [1,4,3,2],
+	        [2,1,3,4],
+	        [2,1,4,3],
+	        [2,3,1,4],
+	        [2,3,4,1],
+	        [2,4,1,3],
+	        [2,4,3,1],
+	        [3,1,2,4],
+	        [3,1,4,2],
+	        [3,2,1,4],
+	        [3,2,4,1],
+	        [3,4,1,2],
+	        [3,4,2,1],
+	        [4,1,2,3],
+	        [4,1,3,2],
+	        [4,2,1,3],
+	        [4,2,3,1],
+	        [4,3,1,2],
+	        [4,3,2,1]
+	      ];
+
+	  triangle.src = link + order[randomNum][0] + ".png";
+	  circle.src = link + order[randomNum][1] + ".png";
+	  cross.src = link + order[randomNum][2] + ".png";
+	  box.src = link + order[randomNum][3] + ".png";
+
+
+	}
+	window.setInterval(init, 2000);
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
