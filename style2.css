@@ -175,11 +175,7 @@ zoom: 125%;
 /* Layout Structure=========================================*/
 
 .main {
-  background: linear-gradient(
-    to bottom right,
-    #eee8dd,
-    #e3d9c6
-    display: flex;
+  background: white;
 
   );
 
