@@ -32,7 +32,7 @@ zoom: 100%;
 
 @media only screen and (max-width: 600px) {
   body {
-  zoom: 67%;
+  zoom: 100%;
   }
 }
 
@@ -88,7 +88,7 @@ zoom: 100%;
 
 /* For inside page's body text */
 .inside-page__text {
-  color: white;
+  color: black;
 }
 
 /* Icons ===========================================*/
@@ -106,7 +106,8 @@ zoom: 100%;
 .inside-page__btn {
   background-color: transparent;
   border: 2px solid;
-  border-radius: .5rem;
+  border-radius: .2rem;
+  border-color: grey;
   font-size: 0.9rem;
   font-weight: 600;
   overflow: hidden;
@@ -133,8 +134,9 @@ zoom: 100%;
 }
 
 .inside-page__btn--city { 
-  border-color: white;
-  color: white;
+  border-color: grey;
+  color: black;
+  border-width: 1px;
 }
 
 .inside-page__btn--city::before { 
@@ -191,8 +193,7 @@ zoom: 100%;
 
 /* Container to hold all cards in one place */
 .card-area {
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
+  color: black;
   align-items: center;
   display: table-cell;
   height: 100%;
@@ -209,7 +210,7 @@ zoom: 100%;
   display: table-cell;
   height: 100%;
   justify-content: center;
-  width: 98%;
+  width: 96%;
   margin: 2px;
   padding-right: 0px;
   padding-bottom: 20px;
@@ -224,17 +225,13 @@ zoom: 100%;
 /* A container to hold the flip card and the inside page */
 .card {
   background-color: rgba(0,0,0, .05);
-  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
   height: 50rem;
   position: relative;
   transition: all 1s ease;
   width: 15rem;
 }
 
-.card
-{
-  box-shadow: 0px 0px 7px 1.5px #333
-}
+
 
 /* Flip card - covering both the front and inside front page */
 
@@ -341,15 +338,15 @@ zoom: 100%;
 /* Inside page */
 
 .inside-page {
-  background-image: linear-gradient(to right, #024B9A , #0185CD);
-  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  background-color: #F1F1F1;
   height: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   position: absolute;
   right: 0;
   transition: all 1s ease;
-  width: 15rem;
+  width: 15.5rem;
   z-index: 1;
+  border: 1px solid grey;
 }
 
 .inside-page__container {
@@ -371,9 +368,7 @@ zoom: 100%;
 }
 
 /* When the card is hovered, the shadow on the inside page will shrink to the left */
-.card:hover .inside-page {
-  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
-}
+
 
 /* Footer ====================================*/
 
