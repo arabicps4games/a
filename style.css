@@ -26,13 +26,13 @@ body {
 }
 
 body{
-zoom: 125%;
+zoom: 100%;
 }
 
 
 @media only screen and (max-width: 600px) {
   body {
-  zoom: 125%;
+  zoom: 67%;
   }
 }
 
@@ -113,9 +113,11 @@ zoom: 125%;
   position: relative;
   text-decoration: none;
   transition: all .3s ease;
-  width: 90%;
-  height: 35px;
+  width: 100%;
+  height: 5%;
   z-index: 10;
+  padding: 4px;
+  margin: 3px;
 }
 
 .inside-page__btn::before { 
