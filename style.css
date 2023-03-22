@@ -629,6 +629,14 @@ social button
   background: #c12127;
 }
 
+.social-button--paypal {
+  color: #3b7bbf;
+}
+
+.social-button--paypal::after {
+  background: #3b7bbf;
+}
+
 
 
 
