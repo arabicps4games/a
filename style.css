@@ -121,7 +121,7 @@ zoom: 100%;
   border-radius: .2rem;
   border-color: grey;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 900;
   overflow: hidden;
   position: relative;
   text-decoration: none;
@@ -129,8 +129,8 @@ zoom: 100%;
   width: 100%;
   height: 5%;
   z-index: 10;
-  padding: 4px;
-  margin: 3px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .inside-page__btn::before { 
@@ -222,10 +222,10 @@ zoom: 100%;
   display: table-cell;
   height: 100%;
   justify-content: center;
-  width: 96%;
+  width: 95%;
   margin: 2px;
   padding-right: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
 }
 
 @media only screen and (max-width: 600px) {
