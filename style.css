@@ -153,7 +153,7 @@ zoom: 150%;
 }
 
 .inside-page__btn--city { 
-  border-color: grey;
+  border-color: #d3d3d3;
   color: black;
   border-width: 1px;
 }
@@ -217,8 +217,14 @@ zoom: 150%;
   display: table-cell;
   height: 100%;
   justify-content: space-evenly;
-  padding-left: 70px;
+  padding-left: 130px;
   padding-right: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+.card-area {
+  padding-left: 100px;
+}
 }
 
 /* Card ============================================*/
@@ -365,7 +371,7 @@ zoom: 150%;
   transition: all 1s ease;
   width: 15.5rem;
   z-index: 1;
-  border: 1px solid grey;
+  border: 1px solid #d3d3d3;
 }
 
 .inside-page__container {
