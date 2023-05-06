@@ -127,7 +127,7 @@ zoom: 150%;
   border: 2px solid;
   border-radius: .2rem;
   border-color: grey;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
   overflow: hidden;
   position: relative;
@@ -136,8 +136,8 @@ zoom: 150%;
   width: 85%;
   height: 5%;
   z-index: 10;
-  padding: 0.4px;
-  margin: 5px;
+  padding: 6px;
+  margin: 1px;
 }
 
 .inside-page__btn::before { 
@@ -155,7 +155,7 @@ zoom: 150%;
 .inside-page__btn--city { 
   border-color: #d3d3d3;
   color: black;
-  border-width: 1px;
+  border-width: 2px;
 }
 
 .inside-page__btn--city::before { 
@@ -371,7 +371,7 @@ zoom: 150%;
   transition: all 1s ease;
   width: 15.5rem;
   z-index: 1;
-  border: 1px solid #d3d3d3;
+  border: 2px solid #d3d3d3;
 }
 
 .inside-page__container {
@@ -788,3 +788,9 @@ loading
 /*
 loading
 */
+
+
+
+
+
+
